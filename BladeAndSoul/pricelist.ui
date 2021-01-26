@@ -189,20 +189,6 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="0" colspan="2">
-     <widget class="QLabel" name="label_QYZXW">
-      <property name="text">
-       <string>起源信物：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_QYZXW">
-      <property name="maximum">
-       <double>1000.000000000000000</double>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="3" colspan="3">
      <widget class="QLabel" name="label_XYK">
       <property name="text">
@@ -316,16 +302,16 @@
      </widget>
     </item>
     <item row="0" column="1" colspan="2">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_BTS">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_TQLJJ">
       <property name="maximum">
        <double>1000.000000000000000</double>
       </property>
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QLabel" name="label_BTS">
+     <widget class="QLabel" name="label_TQLJJ">
       <property name="text">
-       <string>补天石：</string>
+       <string>天乾灵结晶：</string>
       </property>
      </widget>
     </item>
@@ -345,6 +331,20 @@
     </item>
     <item row="5" column="6">
      <widget class="QDoubleSpinBox" name="doubleSpinBox_TZZSP">
+      <property name="maximum">
+       <double>1000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_QYZXW">
+      <property name="text">
+       <string>起源信物：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" colspan="2">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_QYZXW">
       <property name="maximum">
        <double>1000.000000000000000</double>
       </property>

@@ -45,8 +45,6 @@ public:
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_5;
     QDoubleSpinBox *doubleSpinBox_XYK;
-    QLabel *label_QYZXW;
-    QDoubleSpinBox *doubleSpinBox_QYZXW;
     QLabel *label_XYK;
     QDoubleSpinBox *doubleSpinBox_HDDJ;
     QLabel *label_XHMNDBY;
@@ -63,11 +61,13 @@ public:
     QLabel *label_HYMNDXJ;
     QDoubleSpinBox *doubleSpinBox_HYG;
     QLabel *label_HYG;
-    QDoubleSpinBox *doubleSpinBox_BTS;
-    QLabel *label_BTS;
+    QDoubleSpinBox *doubleSpinBox_TQLJJ;
+    QLabel *label_TQLJJ;
     QLabel *label_XHG;
     QLabel *label_TZZSP;
     QDoubleSpinBox *doubleSpinBox_TZZSP;
+    QLabel *label_QYZXW;
+    QDoubleSpinBox *doubleSpinBox_QYZXW;
     QGroupBox *groupBox_4;
     QGridLayout *gridLayout_4;
     QLabel *label_LSXS;
@@ -176,17 +176,6 @@ public:
 
         gridLayout_5->addWidget(doubleSpinBox_XYK, 0, 6, 1, 1);
 
-        label_QYZXW = new QLabel(groupBox_3);
-        label_QYZXW->setObjectName(QStringLiteral("label_QYZXW"));
-
-        gridLayout_5->addWidget(label_QYZXW, 5, 0, 1, 2);
-
-        doubleSpinBox_QYZXW = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_QYZXW->setObjectName(QStringLiteral("doubleSpinBox_QYZXW"));
-        doubleSpinBox_QYZXW->setMaximum(1000);
-
-        gridLayout_5->addWidget(doubleSpinBox_QYZXW, 5, 2, 1, 1);
-
         label_XYK = new QLabel(groupBox_3);
         label_XYK->setObjectName(QStringLiteral("label_XYK"));
 
@@ -275,16 +264,16 @@ public:
 
         gridLayout_5->addWidget(label_HYG, 3, 0, 1, 1);
 
-        doubleSpinBox_BTS = new QDoubleSpinBox(groupBox_3);
-        doubleSpinBox_BTS->setObjectName(QStringLiteral("doubleSpinBox_BTS"));
-        doubleSpinBox_BTS->setMaximum(1000);
+        doubleSpinBox_TQLJJ = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_TQLJJ->setObjectName(QStringLiteral("doubleSpinBox_TQLJJ"));
+        doubleSpinBox_TQLJJ->setMaximum(1000);
 
-        gridLayout_5->addWidget(doubleSpinBox_BTS, 0, 1, 1, 2);
+        gridLayout_5->addWidget(doubleSpinBox_TQLJJ, 0, 1, 1, 2);
 
-        label_BTS = new QLabel(groupBox_3);
-        label_BTS->setObjectName(QStringLiteral("label_BTS"));
+        label_TQLJJ = new QLabel(groupBox_3);
+        label_TQLJJ->setObjectName(QStringLiteral("label_TQLJJ"));
 
-        gridLayout_5->addWidget(label_BTS, 0, 0, 1, 1);
+        gridLayout_5->addWidget(label_TQLJJ, 0, 0, 1, 1);
 
         label_XHG = new QLabel(groupBox_3);
         label_XHG->setObjectName(QStringLiteral("label_XHG"));
@@ -301,6 +290,17 @@ public:
         doubleSpinBox_TZZSP->setMaximum(1000);
 
         gridLayout_5->addWidget(doubleSpinBox_TZZSP, 5, 6, 1, 1);
+
+        label_QYZXW = new QLabel(groupBox_3);
+        label_QYZXW->setObjectName(QStringLiteral("label_QYZXW"));
+
+        gridLayout_5->addWidget(label_QYZXW, 5, 0, 1, 1);
+
+        doubleSpinBox_QYZXW = new QDoubleSpinBox(groupBox_3);
+        doubleSpinBox_QYZXW->setObjectName(QStringLiteral("doubleSpinBox_QYZXW"));
+        doubleSpinBox_QYZXW->setMaximum(1000);
+
+        gridLayout_5->addWidget(doubleSpinBox_QYZXW, 5, 1, 1, 2);
 
         groupBox_4 = new QGroupBox(PriceList);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
@@ -396,7 +396,6 @@ public:
         label_XYJ->setText(QApplication::translate("PriceList", "\351\233\252\345\275\261\351\225\234\357\274\232", Q_NULLPTR));
         label_JYJ->setText(QApplication::translate("PriceList", "\351\207\221\347\211\231\351\225\234\357\274\232", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("PriceList", "\345\205\266\344\273\226", Q_NULLPTR));
-        label_QYZXW->setText(QApplication::translate("PriceList", "\350\265\267\346\272\220\344\277\241\347\211\251\357\274\232", Q_NULLPTR));
         label_XYK->setText(QApplication::translate("PriceList", "\351\233\252\345\275\261\347\237\277\357\274\232", Q_NULLPTR));
         label_XHMNDBY->setText(QApplication::translate("PriceList", "\351\202\252\350\212\261\351\255\224\345\245\263\347\232\204\350\213\236\345\217\266\357\274\232", Q_NULLPTR));
         label_XFZTH->setText(QApplication::translate("PriceList", "\351\233\252\345\263\260\344\271\213\351\223\201\345\215\216\357\274\232", Q_NULLPTR));
@@ -405,9 +404,10 @@ public:
         label_SGS->setText(QApplication::translate("PriceList", "\347\245\236\345\212\237\347\237\263\357\274\232", Q_NULLPTR));
         label_HYMNDXJ->setText(QApplication::translate("PriceList", "\351\273\221\346\234\210\351\255\224\345\245\263\347\232\204\345\210\221\345\205\267\357\274\232", Q_NULLPTR));
         label_HYG->setText(QApplication::translate("PriceList", "\351\273\221\346\234\210\351\222\242\357\274\232", Q_NULLPTR));
-        label_BTS->setText(QApplication::translate("PriceList", "\350\241\245\345\244\251\347\237\263\357\274\232", Q_NULLPTR));
+        label_TQLJJ->setText(QApplication::translate("PriceList", "\345\244\251\344\271\276\347\201\265\347\273\223\346\231\266\357\274\232", Q_NULLPTR));
         label_XHG->setText(QApplication::translate("PriceList", "\351\202\252\350\212\261\351\222\242\357\274\232", Q_NULLPTR));
         label_TZZSP->setText(QApplication::translate("PriceList", "\346\214\221\346\210\230\347\217\240\347\242\216\347\211\207\357\274\232", Q_NULLPTR));
+        label_QYZXW->setText(QApplication::translate("PriceList", "\350\265\267\346\272\220\344\277\241\347\211\251\357\274\232", Q_NULLPTR));
         groupBox_4->setTitle(QApplication::translate("PriceList", "\346\230\237\347\237\263", Q_NULLPTR));
         label_LSXS->setText(QApplication::translate("PriceList", "\351\233\267\347\245\236\346\230\237\347\237\263\357\274\232", Q_NULLPTR));
         label_CHXS->setText(QApplication::translate("PriceList", "\346\231\250\346\231\226\346\230\237\347\237\263\357\274\232", Q_NULLPTR));

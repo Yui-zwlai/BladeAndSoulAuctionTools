@@ -11,7 +11,7 @@
 #define DSB_7 ui->doubleSpinBox_LSXS
 #define DSB_8 ui->doubleSpinBox_CHXS
 #define DSB_9 ui->doubleSpinBox_JLXS
-#define DSB_10 ui->doubleSpinBox_BTS
+#define DSB_10 ui->doubleSpinBox_TQLJJ
 #define DSB_11 ui->doubleSpinBox_XYK
 #define DSB_12 ui->doubleSpinBox_XHMNDBY
 #define DSB_13 ui->doubleSpinBox_XFZTH
@@ -33,7 +33,7 @@ PriceList::PriceList(QWidget *parent) :
     connect(ui->pushButton_close,SIGNAL(clicked(bool)),this,SIGNAL(MainWindowShow()));
     connect(ui->pushButton_confirm,SIGNAL(clicked(bool)),this,SIGNAL(MainWindowShow()));
 
-    setWindowFlags(Qt::FramelessWindowHint|windowFlags());
+    setWindowFlags(Qt::FramelessWindowHint|windowFlags()|Qt::WindowStaysOnTopHint);
 
     m_DoubleSpinBoxArray[0] = DSB_0;
     m_DoubleSpinBoxArray[1] = DSB_1;
@@ -81,7 +81,7 @@ PriceList::PriceList(QWidget *parent) :
                                "梦幻魂石","南天魂石",
                                "天命镜","雪影镜","金牙镜",
                                "雷神星石","晨晖星石","金雷星石",
-                               "补天石","雪影矿",
+                               "天乾灵结晶","雪影矿",
                                "邪花魔女的苞叶","雪峰之铁华","黑月魔女的刑具",
                                "邪花钢","雪峰钢","黑月钢",
                                "神功石","起源之信物","活动道具","挑战珠碎片"};

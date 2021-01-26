@@ -6,6 +6,7 @@
 
 QT       += core gui sql
 RC_ICONS = darkness.ico
+RC_FILE += res.rc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -45,3 +46,6 @@ FORMS += \
 
 RESOURCES += \
     img.qrc
+
+DISTFILES += \
+    res.rc

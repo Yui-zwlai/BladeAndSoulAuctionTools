@@ -1,8 +1,6 @@
 #ifndef EPRICELIST_H
 #define EPRICELIST_H
 
-#define ECOUNT 13
-
 #include <QWidget>
 #include <QSqlDatabase>
 #include <QSqlDriver>
@@ -13,6 +11,8 @@
 
 #include <QDoubleSpinBox>
 #include <QMessageBox>
+
+#define ECOUNT 10
 namespace Ui {
 class Epricelist;
 }
