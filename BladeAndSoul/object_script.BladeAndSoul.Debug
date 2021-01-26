@@ -1,0 +1,12 @@
+INPUT(
+./debug/main.o
+./debug/mainwindow.o
+./debug/pricelist.o
+./debug/epricelist.o
+./debug/takecolor.o
+./debug/qrc_img.o
+./debug/moc_mainwindow.o
+./debug/moc_pricelist.o
+./debug/moc_epricelist.o
+./debug/moc_takecolor.o
+);

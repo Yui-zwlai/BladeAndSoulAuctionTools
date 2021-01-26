@@ -1,2 +1,3 @@
-# BladeAndSoulAuctionTools
-剑灵竞拍工具
+# 剑灵竞拍工具
+
+采用QT编写
