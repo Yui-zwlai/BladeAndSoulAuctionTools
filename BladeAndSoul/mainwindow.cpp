@@ -12,7 +12,7 @@
 #define PB_7 ui->pushButton_LSXS
 #define PB_8 ui->pushButton_CHXS
 #define PB_9 ui->pushButton_JLXS
-#define PB_10 ui->pushButton_BTS
+#define PB_10 ui->pushButton_TQLJJ
 #define PB_11 ui->pushButton_XYK
 #define PB_12 ui->pushButton_XHMNDBY
 #define PB_13 ui->pushButton_XFZTH
@@ -30,8 +30,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setWindowTitle("剑灵材料竞拍计算器v1.51   by:金色");
+    setWindowTitle("剑灵材料竞拍计算器v1.52");
     setWindowIcon(QIcon(":/img/darkness.ico"));
+
+    setWindowFlags(Qt::WindowStaysOnTopHint);
 
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./qtdb");
@@ -233,14 +235,17 @@ void MainWindow::MainWindowShow()
 void MainWindow::on_action_about_triggered()
 {
     QMessageBox::about(this,"关于",
+                                 "v1.52\r\n"
+                                 "-移除补天石、添加天乾灵结晶\r\n"
+                                 "-移除三途川及以下装备\r\n"
+                                 "-添加装备：明神戒指、斗神手套\r\n"
+                                 "界面置顶，查询更方便\t\n"
+                                 "\t\t\t\t\t      更新日期：2021.01.26\r\n\r\n"
                                  "v1.51\r\n"
                                  "-移除泰天材料、添加黑月材料\r\n"
-                                 "-添加邪花钢、雪峰钢、黑月钢、神功石、起源信物、活动道具、挑战珠碎片\r\n"
+                                 "-添加邪花钢、雪峰钢、黑月钢、神功石、起源信物、活动道具、挑战碎片\r\n"
                                  "-移除邪花及以下装备\r\n"
                                  "-修复装备查询bug\r\n"
                                  "-优化UI\r\n"
-                                 "\t\t\t\t\t        更新日期：2021.1.4\r\n"
-                                 "\r\n材料计算公式：(原价*系数/总人数)*(总人数-1)\r\n"
-                                 "材料最高价系数：0.95(表示除去手续费后每个人收益)\r\n"
-                                 "材料最低价系数：0.865(表示别人不顶你能获得最大收益)\r\n");
+                                 "\t\t\t\t\t      更新日期：2021.01.04\r\n");
 }

@@ -38,7 +38,7 @@
     <property name="title">
      <string>材料查询</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -135,15 +135,15 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QPushButton" name="pushButton_BTS">
+       <widget class="QPushButton" name="pushButton_TQLJJ">
         <property name="text">
-         <string>补天石</string>
+         <string>天乾灵结晶</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -182,7 +182,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -292,12 +292,22 @@
      </property>
      <item>
       <property name="text">
-       <string>苦痛梦幻魂</string>
+       <string>蟠桃戒指</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>毁灭梦幻魂</string>
+       <string>齐天手套</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>金雷星</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>三极手镯</string>
       </property>
      </item>
      <item>
@@ -312,42 +322,17 @@
      </item>
      <item>
       <property name="text">
-       <string>神山腰带</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>金刚腰带</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>蟠桃戒指</string>
+       <string>明神戒指</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>三光手镯</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>三极手镯</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>齐天手套</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>晨晖星</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>金雷星</string>
+       <string>斗神手套</string>
       </property>
      </item>
     </widget>
