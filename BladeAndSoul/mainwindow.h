@@ -13,7 +13,7 @@
 
 #include <QDebug>
 
-#define COUNT 21
+#define COUNT 20
 #define cout qDebug() << "[" <<__FILE__ <<":"<<__LINE__ <<"]"
 
 namespace Ui {
