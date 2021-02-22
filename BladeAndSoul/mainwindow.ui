@@ -6,19 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>238</width>
+    <width>249</width>
     <height>489</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>238</width>
-    <height>489</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>238</width>
+    <width>246</width>
     <height>489</height>
    </size>
   </property>
@@ -31,19 +25,19 @@
      <rect>
       <x>20</x>
       <y>150</y>
-      <width>161</width>
-      <height>321</height>
+      <width>211</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="title">
      <string>材料查询</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>13</x>
        <y>22</y>
-       <width>121</width>
+       <width>191</width>
        <height>268</height>
       </rect>
      </property>
@@ -439,7 +433,7 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>171</width>
+      <width>211</width>
       <height>61</height>
      </rect>
     </property>
@@ -468,7 +462,7 @@
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>201</width>
+      <width>211</width>
       <height>61</height>
      </rect>
     </property>
@@ -553,7 +547,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>238</width>
+     <width>249</width>
      <height>23</height>
     </rect>
    </property>

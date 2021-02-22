@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setWindowTitle("剑灵材料竞拍计算器v1.52");
+    setWindowTitle("剑灵材料竞拍计算器");
     setWindowIcon(QIcon(":/img/darkness.ico"));
 
     setWindowFlags(Qt::WindowStaysOnTopHint);
@@ -261,19 +261,17 @@ void MainWindow::on_action_about_triggered()
 {
     QMessageBox::about(this,"关于",
                             "v1.53\r\n"
-                            "材料查询使用图标显示\t\n"
-                            "\t\t\t\t\t      更新日期：2021.02.05\r\n\r\n"
+                            "材料查询使用图标显示\t\n\n"
                             "v1.52\r\n"
                             "-移除补天石、添加天乾灵结晶\r\n"
                             "-移除三途川及以下装备\r\n"
                             "-添加装备：明神戒指、斗神手套\r\n"
-                            "界面置顶（管理员身份运行），查询更方便\t\n"
-                            "\t\t\t\t\t      更新日期：2021.01.26\r\n\r\n"
+                            "界面置顶（管理员身份运行），查询更方便\t\n\n"
+
                             "v1.51\r\n"
                             "-移除泰天材料、添加黑月材料\r\n"
                             "-添加邪花钢、雪峰钢、黑月钢、神功石、起源信物、挑战碎片\r\n"
                             "-移除邪花及以下装备\r\n"
                             "-修复装备查询bug\r\n"
-                            "-优化UI\r\n"
-                            "\t\t\t\t\t      更新日期：2021.01.04\r\n");
+                            "-优化UI\r\n");
 }

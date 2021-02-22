@@ -35,7 +35,7 @@ public:
     QAction *action_about;
     QWidget *centralWidget;
     QGroupBox *groupBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QPushButton *pushButton_XHG;
     QPushButton *pushButton_SGS;
@@ -71,9 +71,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(238, 489);
-        MainWindow->setMinimumSize(QSize(238, 489));
-        MainWindow->setMaximumSize(QSize(238, 489));
+        MainWindow->resize(249, 489);
+        MainWindow->setMinimumSize(QSize(246, 489));
         action = new QAction(MainWindow);
         action->setObjectName(QStringLiteral("action"));
         action_2 = new QAction(MainWindow);
@@ -86,121 +85,121 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(20, 150, 161, 321));
-        widget = new QWidget(groupBox);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(13, 22, 121, 268));
-        gridLayout = new QGridLayout(widget);
+        groupBox->setGeometry(QRect(20, 150, 211, 301));
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(13, 22, 191, 268));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_XHG = new QPushButton(widget);
+        pushButton_XHG = new QPushButton(layoutWidget);
         pushButton_XHG->setObjectName(QStringLiteral("pushButton_XHG"));
         pushButton_XHG->setMinimumSize(QSize(0, 28));
         pushButton_XHG->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XHG, 6, 2, 1, 1);
 
-        pushButton_SGS = new QPushButton(widget);
+        pushButton_SGS = new QPushButton(layoutWidget);
         pushButton_SGS->setObjectName(QStringLiteral("pushButton_SGS"));
         pushButton_SGS->setMinimumSize(QSize(0, 28));
         pushButton_SGS->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_SGS, 7, 0, 1, 1);
 
-        pushButton_XYJ = new QPushButton(widget);
+        pushButton_XYJ = new QPushButton(layoutWidget);
         pushButton_XYJ->setObjectName(QStringLiteral("pushButton_XYJ"));
         pushButton_XYJ->setMinimumSize(QSize(0, 28));
         pushButton_XYJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XYJ, 2, 1, 1, 1);
 
-        pushButton_TZZSP = new QPushButton(widget);
+        pushButton_TZZSP = new QPushButton(layoutWidget);
         pushButton_TZZSP->setObjectName(QStringLiteral("pushButton_TZZSP"));
         pushButton_TZZSP->setMinimumSize(QSize(0, 28));
         pushButton_TZZSP->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_TZZSP, 7, 1, 1, 1);
 
-        pushButton_XFZTH = new QPushButton(widget);
+        pushButton_XFZTH = new QPushButton(layoutWidget);
         pushButton_XFZTH->setObjectName(QStringLiteral("pushButton_XFZTH"));
         pushButton_XFZTH->setMinimumSize(QSize(0, 28));
         pushButton_XFZTH->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XFZTH, 5, 1, 1, 1);
 
-        pushButton_XFG = new QPushButton(widget);
+        pushButton_XFG = new QPushButton(layoutWidget);
         pushButton_XFG->setObjectName(QStringLiteral("pushButton_XFG"));
         pushButton_XFG->setMinimumSize(QSize(0, 28));
         pushButton_XFG->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XFG, 6, 1, 1, 1);
 
-        pushButton_HYG = new QPushButton(widget);
+        pushButton_HYG = new QPushButton(layoutWidget);
         pushButton_HYG->setObjectName(QStringLiteral("pushButton_HYG"));
         pushButton_HYG->setMinimumSize(QSize(0, 28));
         pushButton_HYG->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_HYG, 6, 0, 1, 1);
 
-        pushButton_XHMNDBY = new QPushButton(widget);
+        pushButton_XHMNDBY = new QPushButton(layoutWidget);
         pushButton_XHMNDBY->setObjectName(QStringLiteral("pushButton_XHMNDBY"));
         pushButton_XHMNDBY->setMinimumSize(QSize(0, 28));
         pushButton_XHMNDBY->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XHMNDBY, 5, 2, 1, 1);
 
-        pushButton_TQLJJ = new QPushButton(widget);
+        pushButton_TQLJJ = new QPushButton(layoutWidget);
         pushButton_TQLJJ->setObjectName(QStringLiteral("pushButton_TQLJJ"));
         pushButton_TQLJJ->setMinimumSize(QSize(0, 28));
         pushButton_TQLJJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_TQLJJ, 4, 1, 1, 1);
 
-        pushButton_NTHS = new QPushButton(widget);
+        pushButton_NTHS = new QPushButton(layoutWidget);
         pushButton_NTHS->setObjectName(QStringLiteral("pushButton_NTHS"));
         pushButton_NTHS->setMinimumSize(QSize(0, 28));
         pushButton_NTHS->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_NTHS, 1, 0, 1, 1);
 
-        pushButton_CHXS = new QPushButton(widget);
+        pushButton_CHXS = new QPushButton(layoutWidget);
         pushButton_CHXS->setObjectName(QStringLiteral("pushButton_CHXS"));
         pushButton_CHXS->setMinimumSize(QSize(0, 28));
         pushButton_CHXS->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_CHXS, 3, 1, 1, 1);
 
-        pushButton_TMJ = new QPushButton(widget);
+        pushButton_TMJ = new QPushButton(layoutWidget);
         pushButton_TMJ->setObjectName(QStringLiteral("pushButton_TMJ"));
         pushButton_TMJ->setMinimumSize(QSize(0, 28));
         pushButton_TMJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_TMJ, 2, 2, 1, 1);
 
-        pushButton_MHHS = new QPushButton(widget);
+        pushButton_MHHS = new QPushButton(layoutWidget);
         pushButton_MHHS->setObjectName(QStringLiteral("pushButton_MHHS"));
         pushButton_MHHS->setMinimumSize(QSize(0, 28));
         pushButton_MHHS->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_MHHS, 1, 1, 1, 1);
 
-        pushButton_LSXS = new QPushButton(widget);
+        pushButton_LSXS = new QPushButton(layoutWidget);
         pushButton_LSXS->setObjectName(QStringLiteral("pushButton_LSXS"));
         pushButton_LSXS->setMinimumSize(QSize(0, 28));
         pushButton_LSXS->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_LSXS, 3, 2, 1, 1);
 
-        pushButton_LYJJ = new QPushButton(widget);
+        pushButton_LYJJ = new QPushButton(layoutWidget);
         pushButton_LYJJ->setObjectName(QStringLiteral("pushButton_LYJJ"));
         pushButton_LYJJ->setMinimumSize(QSize(30, 28));
         pushButton_LYJJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_LYJJ, 0, 1, 1, 1);
 
-        pushButton_FHJJ = new QPushButton(widget);
+        pushButton_FHJJ = new QPushButton(layoutWidget);
         pushButton_FHJJ->setObjectName(QStringLiteral("pushButton_FHJJ"));
         pushButton_FHJJ->setEnabled(true);
         pushButton_FHJJ->setMinimumSize(QSize(0, 28));
@@ -208,28 +207,28 @@ public:
 
         gridLayout->addWidget(pushButton_FHJJ, 0, 0, 1, 1);
 
-        pushButton_JYJ = new QPushButton(widget);
+        pushButton_JYJ = new QPushButton(layoutWidget);
         pushButton_JYJ->setObjectName(QStringLiteral("pushButton_JYJ"));
         pushButton_JYJ->setMinimumSize(QSize(0, 28));
         pushButton_JYJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_JYJ, 2, 0, 1, 1);
 
-        pushButton_HYMNDXJ = new QPushButton(widget);
+        pushButton_HYMNDXJ = new QPushButton(layoutWidget);
         pushButton_HYMNDXJ->setObjectName(QStringLiteral("pushButton_HYMNDXJ"));
         pushButton_HYMNDXJ->setMinimumSize(QSize(0, 28));
         pushButton_HYMNDXJ->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_HYMNDXJ, 5, 0, 1, 1);
 
-        pushButton_XYK = new QPushButton(widget);
+        pushButton_XYK = new QPushButton(layoutWidget);
         pushButton_XYK->setObjectName(QStringLiteral("pushButton_XYK"));
         pushButton_XYK->setMinimumSize(QSize(0, 28));
         pushButton_XYK->setMaximumSize(QSize(33, 16777215));
 
         gridLayout->addWidget(pushButton_XYK, 4, 0, 1, 1);
 
-        pushButton_JLXS = new QPushButton(widget);
+        pushButton_JLXS = new QPushButton(layoutWidget);
         pushButton_JLXS->setObjectName(QStringLiteral("pushButton_JLXS"));
         pushButton_JLXS->setMinimumSize(QSize(0, 28));
         pushButton_JLXS->setMaximumSize(QSize(33, 16777215));
@@ -238,7 +237,7 @@ public:
 
         groupBox_4 = new QGroupBox(centralWidget);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setGeometry(QRect(20, 10, 171, 61));
+        groupBox_4->setGeometry(QRect(20, 10, 211, 61));
         gridLayout_4 = new QGridLayout(groupBox_4);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -256,7 +255,7 @@ public:
 
         groupBox_5 = new QGroupBox(centralWidget);
         groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
-        groupBox_5->setGeometry(QRect(20, 80, 201, 61));
+        groupBox_5->setGeometry(QRect(20, 80, 211, 61));
         comboBox_ZBCX = new QComboBox(groupBox_5);
         comboBox_ZBCX->setObjectName(QStringLiteral("comboBox_ZBCX"));
         comboBox_ZBCX->setGeometry(QRect(10, 20, 101, 22));
@@ -267,7 +266,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 238, 23));
+        menuBar->setGeometry(QRect(0, 0, 249, 23));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         MainWindow->setMenuBar(menuBar);
