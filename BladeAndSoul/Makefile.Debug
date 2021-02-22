@@ -17,13 +17,13 @@ CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wextra -Wall -W -fex
 INCPATH       = -I. -I../../../../Qt/5.9.3/mingw53_32/include -I../../../../Qt/5.9.3/mingw53_32/include/QtWidgets -I../../../../Qt/5.9.3/mingw53_32/include/QtGui -I../../../../Qt/5.9.3/mingw53_32/include/QtANGLE -I../../../../Qt/5.9.3/mingw53_32/include/QtSql -I../../../../Qt/5.9.3/mingw53_32/include/QtCore -Idebug -I. -I../../../../Qt/5.9.3/mingw53_32/mkspecs/win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LD:/RD/Qt/5.9.3/mingw53_32/lib D:/RD/Qt/5.9.3/mingw53_32/lib/libqtmaind.a -LC:/utils/my_sql/my_sql/lib -LC:/utils/postgresql/pgsql/lib -lshell32 D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Cored.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Widgetsd.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Guid.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Sqld.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Cored.a debug/res_res.o 
+LIBS        =        -lmingw32 -LD:/RD/Qt/5.9.3/mingw53_32/lib D:/RD/Qt/5.9.3/mingw53_32/lib/libqtmaind.a -LC:/utils/my_sql/my_sql/lib -LC:/utils/postgresql/pgsql/lib -lshell32 D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Cored.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Widgetsd.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Guid.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Sqld.a D:/RD/Qt/5.9.3/mingw53_32/lib/libQt5Cored.a debug/BladeAndSoul_resource_res.o 
 QMAKE         = D:/RD/Qt/5.9.3/mingw53_32/bin/qmake.exe
 IDC           = idc
 IDL           = midl
 ZIP           = 
 DEF_FILE      = 
-RES_FILE      = debug/res_res.o
+RES_FILE      = debug/BladeAndSoul_resource_res.o
 COPY          = cp -f
 SED           = sed
 COPY_FILE     = cp -f
@@ -83,11 +83,11 @@ DESTDIR_TARGET = debug/BladeAndSoul.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_mainwindow.h ui_pricelist.h ui_epricelist.h ui_takecolor.h $(OBJECTS) debug/res_res.o
+$(DESTDIR_TARGET): ui_mainwindow.h ui_pricelist.h ui_epricelist.h ui_takecolor.h $(OBJECTS) debug/BladeAndSoul_resource_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.BladeAndSoul.Debug  $(LIBS)
 
-debug/res_res.o: res.rc
-	windres -i res.rc -o debug/res_res.o --include-dir=. $(DEFINES)
+debug/BladeAndSoul_resource_res.o: BladeAndSoul_resource.rc
+	windres -i BladeAndSoul_resource.rc -o debug/BladeAndSoul_resource_res.o --include-dir=. $(DEFINES)
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Debug BladeAndSoul.pro -spec win32-g++
@@ -99,7 +99,7 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug/main.o debug/mainwindow.o debug/pricelist.o debug/epricelist.o debug/takecolor.o debug/qrc_img.o debug/moc_mainwindow.o debug/moc_pricelist.o debug/moc_epricelist.o debug/moc_takecolor.o
-	-$(DEL_FILE) debug/res_res.o
+	-$(DEL_FILE) debug/BladeAndSoul_resource_res.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash

@@ -21,7 +21,6 @@
 #define DSB_17 ui->doubleSpinBox_HYG
 #define DSB_18 ui->doubleSpinBox_SGS
 #define DSB_19 ui->doubleSpinBox_QYZXW
-#define DSB_20 ui->doubleSpinBox_HDDJ
 #define DSB_21 ui->doubleSpinBox_TZZSP
 
 PriceList::PriceList(QWidget *parent) :
@@ -55,8 +54,7 @@ PriceList::PriceList(QWidget *parent) :
     m_DoubleSpinBoxArray[17] = DSB_17;
     m_DoubleSpinBoxArray[18] = DSB_18;
     m_DoubleSpinBoxArray[19] = DSB_19;
-    m_DoubleSpinBoxArray[20] = DSB_20;
-    m_DoubleSpinBoxArray[21] = DSB_21;
+    m_DoubleSpinBoxArray[20] = DSB_21;
 
 
     db = QSqlDatabase::addDatabase("QSQLITE");
@@ -71,7 +69,7 @@ PriceList::PriceList(QWidget *parent) :
     }
     QSqlQuery query;
     bool success = query.exec("create table materials(id int primary key,name varchar,"
-                                      "price float)");
+                                      "price float,Ename varchar)");
     if(success)
         cout << "创建成功";
     else
@@ -84,20 +82,33 @@ PriceList::PriceList(QWidget *parent) :
                                "天乾灵结晶","雪影矿",
                                "邪花魔女的苞叶","雪峰之铁华","黑月魔女的刑具",
                                "邪花钢","雪峰钢","黑月钢",
-                               "神功石","起源之信物","活动道具","挑战珠碎片"};
+                               "神功石","起源之信物","挑战珠碎片"};
+
+    QString EnameInit[MCOUNT] ={"pushButton_LYJJ","pushButton_FHJJ",
+                                "pushButton_MHHS","pushButton_NTHS",
+                                "pushButton_TMJ","pushButton_XYJ","pushButton_JYJ",
+                                "pushButton_LSXS","pushButton_CHXS","pushButton_JLXS",
+                                "pushButton_TQLJJ","pushButton_XYK",
+                                "pushButton_XHMNDBY","pushButton_XFZTH","pushButton_HYMNDXJ",
+                                "pushButton_XHG","pushButton_XFG","pushButton_HYG",
+                                "pushButton_SGS","pushButton_QYZXW","pushButton_TZZSP"
+
+    };
 
     int id[40];
     QString name[40];
+    QString Ename[40];
     double price[40];
 
 //    query.exec("DROP TABLE materials");
 
     for(int i = 0; i < MCOUNT; i++)
     {
-        query.prepare("insert into materials values(?,?, ?)");
+        query.prepare("insert into materials values(?,?, ?,?)");
         query.bindValue(0, i);
         query.bindValue(1, nameInit[i]);
         query.bindValue(2, 0);
+        query.bindValue(3, EnameInit[i]);
         success=query.exec();
         if(!success)
         {
@@ -105,7 +116,7 @@ PriceList::PriceList(QWidget *parent) :
             query.next();
             if(nameInit[i] != query.value(0).toString())
             {
-                query.exec(tr("UPDATE materials SET name = '%1'WHERE id= '%2'").arg(nameInit[i]).arg(i));
+                query.exec(tr("UPDATE materials SET name = '%1',Ename = '%2' WHERE id= '%3'").arg(nameInit[i]).arg(EnameInit[i]).arg(i));
                 cout << "修改成功";
             }
             else
@@ -123,9 +134,11 @@ PriceList::PriceList(QWidget *parent) :
         id[i] = query.value(0).toInt(&ok);
         name[i] = query.value(1).toString();
         price[i] = query.value(2).toFloat(&ok);
+        Ename[i] = query.value(3).toString();
         cout << id[i];
         cout << name[i];
         cout << price[i];
+        cout << Ename[i];
         i++;
     }
 

@@ -6,7 +6,7 @@
 
 QT       += core gui sql
 RC_ICONS = darkness.ico
-RC_FILE += res.rc
+#RC_FILE += res.rc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

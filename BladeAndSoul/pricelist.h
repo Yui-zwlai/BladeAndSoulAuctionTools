@@ -12,7 +12,7 @@
 #include <QDoubleSpinBox>
 #include <QMessageBox>
 
-#define MCOUNT 22
+#define MCOUNT 21
 namespace Ui {
 class PriceList;
 }

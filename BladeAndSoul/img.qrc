@@ -1,5 +1,25 @@
 <RCC>
     <qresource prefix="/img">
         <file>darkness.ico</file>
+        <file>jpg/晨晖星石.jpg</file>
+        <file>jpg/烦惑结晶.jpg</file>
+        <file>jpg/黑月钢.jpg</file>
+        <file>jpg/黑月魔女的刑具.jpg</file>
+        <file>jpg/金雷星石.jpg</file>
+        <file>jpg/金牙镜.jpg</file>
+        <file>jpg/雷神星石.jpg</file>
+        <file>jpg/雷云结晶.jpg</file>
+        <file>jpg/梦幻魂石.jpg</file>
+        <file>jpg/南天魂石.jpg</file>
+        <file>jpg/神功石.jpg</file>
+        <file>jpg/天命镜.jpg</file>
+        <file>jpg/天乾灵结晶.jpg</file>
+        <file>jpg/挑战珠碎片.jpg</file>
+        <file>jpg/邪花钢.jpg</file>
+        <file>jpg/邪花魔女的苞叶.jpg</file>
+        <file>jpg/雪峰钢.jpg</file>
+        <file>jpg/雪峰之铁华.jpg</file>
+        <file>jpg/雪影镜.jpg</file>
+        <file>jpg/雪影矿.jpg</file>
     </qresource>
 </RCC>

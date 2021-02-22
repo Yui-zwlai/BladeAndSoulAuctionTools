@@ -21,8 +21,7 @@
 #define PB_16 ui->pushButton_XFG
 #define PB_17 ui->pushButton_HYG
 #define PB_18 ui->pushButton_SGS
-#define PB_19 ui->pushButton_HDDJ
-#define PB_20 ui->pushButton_TZZSP
+#define PB_19 ui->pushButton_TZZSP
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -30,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setWindowTitle("剑灵材料竞拍计算器v1.52");
+    setWindowTitle("剑灵材料竞拍计算器");
     setWindowIcon(QIcon(":/img/darkness.ico"));
 
     setWindowFlags(Qt::WindowStaysOnTopHint);
@@ -67,10 +66,35 @@ MainWindow::MainWindow(QWidget *parent) :
     m_PushButtonArray[17] = PB_17;
     m_PushButtonArray[18] = PB_18;
     m_PushButtonArray[19] = PB_19;
-    m_PushButtonArray[20] = PB_20;
+
+    m_PushButtonArray[0]->setIcon(QIcon(":/img/jpg/雷云结晶.jpg"));
+    m_PushButtonArray[1]->setIcon(QIcon(":/img/jpg/烦惑结晶.jpg"));
+    m_PushButtonArray[2]->setIcon(QIcon(":/img/jpg/梦幻魂石.jpg"));
+    m_PushButtonArray[3]->setIcon(QIcon(":/img/jpg/南天魂石.jpg"));
+    m_PushButtonArray[4]->setIcon(QIcon(":/img/jpg/天命镜.jpg"));
+    m_PushButtonArray[5]->setIcon(QIcon(":/img/jpg/雪影镜.jpg"));
+    m_PushButtonArray[6]->setIcon(QIcon(":/img/jpg/金牙镜.jpg"));
+    m_PushButtonArray[7]->setIcon(QIcon(":/img/jpg/雷神星石.jpg"));
+    m_PushButtonArray[8]->setIcon(QIcon(":/img/jpg/晨晖星石.jpg"));
+    m_PushButtonArray[9]->setIcon(QIcon(":/img/jpg/金雷星石.jpg"));
+    m_PushButtonArray[10]->setIcon(QIcon(":/img/jpg/天乾灵结晶.jpg"));
+    m_PushButtonArray[11]->setIcon(QIcon(":/img/jpg/雪影矿.jpg"));
+    m_PushButtonArray[12]->setIcon(QIcon(":/img/jpg/邪花魔女的苞叶.jpg"));
+    m_PushButtonArray[13]->setIcon(QIcon(":/img/jpg/雪峰之铁华.jpg"));
+    m_PushButtonArray[14]->setIcon(QIcon(":/img/jpg/黑月魔女的刑具.jpg"));
+    m_PushButtonArray[15]->setIcon(QIcon(":/img/jpg/邪花钢.jpg"));
+    m_PushButtonArray[16]->setIcon(QIcon(":/img/jpg/雪峰钢.jpg"));
+    m_PushButtonArray[17]->setIcon(QIcon(":/img/jpg/黑月钢.jpg"));
+    m_PushButtonArray[18]->setIcon(QIcon(":/img/jpg/神功石.jpg"));
+    m_PushButtonArray[19]->setIcon(QIcon(":/img/jpg/挑战珠碎片.jpg"));
+
+
 
     for(int i = 0; i < COUNT; i++)
+    {
+        m_PushButtonArray[i]->setIconSize(QSize(33,28));
         connect(m_PushButtonArray[i],SIGNAL(clicked(bool)),this,SLOT(MaterialsCalculateButton()));
+    }
 
     connect(ui->pushButton_ZBCX,SIGNAL(clicked(bool)),this,SLOT(EquipmentCalcualteButton()));
     w = new PriceList();
@@ -184,7 +208,8 @@ void MainWindow::MaterialsCalculateButton()
         if(sender == m_PushButtonArray[i])
         {
             QSqlQuery query;
-            query.exec("select * from materials where name = '" + m_PushButtonArray[i]->text() + "'");
+            cout << m_PushButtonArray[i]->objectName();
+            query.exec("select * from materials where Ename = '" + m_PushButtonArray[i]->objectName() + "'");
             while(query.next())
             {
                 bool ok;
@@ -235,17 +260,18 @@ void MainWindow::MainWindowShow()
 void MainWindow::on_action_about_triggered()
 {
     QMessageBox::about(this,"关于",
-                                 "v1.52\r\n"
-                                 "-移除补天石、添加天乾灵结晶\r\n"
-                                 "-移除三途川及以下装备\r\n"
-                                 "-添加装备：明神戒指、斗神手套\r\n"
-                                 "界面置顶，查询更方便\t\n"
-                                 "\t\t\t\t\t      更新日期：2021.01.26\r\n\r\n"
-                                 "v1.51\r\n"
-                                 "-移除泰天材料、添加黑月材料\r\n"
-                                 "-添加邪花钢、雪峰钢、黑月钢、神功石、起源信物、活动道具、挑战碎片\r\n"
-                                 "-移除邪花及以下装备\r\n"
-                                 "-修复装备查询bug\r\n"
-                                 "-优化UI\r\n"
-                                 "\t\t\t\t\t      更新日期：2021.01.04\r\n");
+                            "v1.53\r\n"
+                            "材料查询使用图标显示\t\n\n"
+                            "v1.52\r\n"
+                            "-移除补天石、添加天乾灵结晶\r\n"
+                            "-移除三途川及以下装备\r\n"
+                            "-添加装备：明神戒指、斗神手套\r\n"
+                            "界面置顶（管理员身份运行），查询更方便\t\n\n"
+
+                            "v1.51\r\n"
+                            "-移除泰天材料、添加黑月材料\r\n"
+                            "-添加邪花钢、雪峰钢、黑月钢、神功石、起源信物、挑战碎片\r\n"
+                            "-移除邪花及以下装备\r\n"
+                            "-修复装备查询bug\r\n"
+                            "-优化UI\r\n");
 }
