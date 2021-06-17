@@ -28,18 +28,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+    materialcalculation.cpp \
     pricelist.cpp \
     epricelist.cpp \
     takecolor.cpp
 
 HEADERS += \
         mainwindow.h \
+    materialcalculation.h \
     pricelist.h \
     epricelist.h \
     takecolor.h
 
 FORMS += \
         mainwindow.ui \
+    materialcalculation.ui \
     pricelist.ui \
     epricelist.ui \
     takecolor.ui

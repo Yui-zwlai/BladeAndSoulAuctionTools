@@ -3,25 +3,29 @@
 
 #define DSB_0 ui->doubleSpinBox_LYJJ
 #define DSB_1 ui->doubleSpinBox_FHJJ
-#define DSB_2 ui->doubleSpinBox_MHHS
+#define DSB_2 ui->doubleSpinBox_TSJJ
 #define DSB_3 ui->doubleSpinBox_NTHS
-#define DSB_4 ui->doubleSpinBox_TMJ
+#define DSB_4 ui->doubleSpinBox_MHHS
 #define DSB_5 ui->doubleSpinBox_XYJ
 #define DSB_6 ui->doubleSpinBox_JYJ
-#define DSB_7 ui->doubleSpinBox_LSXS
+#define DSB_7 ui->doubleSpinBox_YHJ
+
 #define DSB_8 ui->doubleSpinBox_CHXS
 #define DSB_9 ui->doubleSpinBox_JLXS
-#define DSB_10 ui->doubleSpinBox_TQLJJ
-#define DSB_11 ui->doubleSpinBox_XYK
-#define DSB_12 ui->doubleSpinBox_XHMNDBY
+#define DSB_10 ui->doubleSpinBox_YGXS
+
+#define DSB_11 ui->doubleSpinBox_TQLJJ
+#define DSB_12 ui->doubleSpinBox_XYK
 #define DSB_13 ui->doubleSpinBox_XFZTH
 #define DSB_14 ui->doubleSpinBox_HYMNDXJ
-#define DSB_15 ui->doubleSpinBox_XHG
-#define DSB_16 ui->doubleSpinBox_XFG
-#define DSB_17 ui->doubleSpinBox_HYG
-#define DSB_18 ui->doubleSpinBox_SGS
-#define DSB_19 ui->doubleSpinBox_QYZXW
-#define DSB_21 ui->doubleSpinBox_TZZSP
+
+#define DSB_15 ui->doubleSpinBox_XFG
+#define DSB_16 ui->doubleSpinBox_HYG
+#define DSB_17 ui->doubleSpinBox_SGS
+#define DSB_18 ui->doubleSpinBox_QYZXW
+#define DSB_19 ui->doubleSpinBox_TZZSP
+
+
 
 PriceList::PriceList(QWidget *parent) :
     QWidget(parent),
@@ -54,11 +58,9 @@ PriceList::PriceList(QWidget *parent) :
     m_DoubleSpinBoxArray[17] = DSB_17;
     m_DoubleSpinBoxArray[18] = DSB_18;
     m_DoubleSpinBoxArray[19] = DSB_19;
-    m_DoubleSpinBoxArray[20] = DSB_21;
-
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("./qtdb");
+    db.setDatabaseName("./qtdb1.54");
     db.setHostName("admin");
     db.setUserName("admin");
     db.setPassword("12345");
@@ -75,30 +77,31 @@ PriceList::PriceList(QWidget *parent) :
     else
         cout << "创建失败";
 
-    QString nameInit[MCOUNT] = {"雷云结晶","烦惑结晶",
-                               "梦幻魂石","南天魂石",
-                               "天命镜","雪影镜","金牙镜",
-                               "雷神星石","晨晖星石","金雷星石",
+    QString nameInit[MCOUNT] = {"雷云结晶","烦惑结晶","天寿结晶",
+                               "南天魂石","冥幻魂石",
+                               "雪影镜","金牙镜","曜火镜",
+                               "晨晖星石","金雷星石","月光星石",
                                "天乾灵结晶","雪影矿",
-                               "邪花魔女的苞叶","雪峰之铁华","黑月魔女的刑具",
-                               "邪花钢","雪峰钢","黑月钢",
-                               "神功石","起源之信物","挑战珠碎片"};
+                               "雪峰之铁华","黑月魔女的刑具",
+                               "雪峰钢","黑月钢",
+                               "神功石","起源之信物","挑战珠碎片"
+                               };
 
-    QString EnameInit[MCOUNT] ={"pushButton_LYJJ","pushButton_FHJJ",
-                                "pushButton_MHHS","pushButton_NTHS",
-                                "pushButton_TMJ","pushButton_XYJ","pushButton_JYJ",
-                                "pushButton_LSXS","pushButton_CHXS","pushButton_JLXS",
+    QString EnameInit[MCOUNT] ={"pushButton_LYJJ","pushButton_FHJJ","pushButton_TSJJ",
+                                "pushButton_NTHS","pushButton_MHHS",
+                                "pushButton_XYJ","pushButton_JYJ","pushButton_YHJ",
+                                "pushButton_CHXS","pushButton_JLXS","pushButton_YGXS",
                                 "pushButton_TQLJJ","pushButton_XYK",
-                                "pushButton_XHMNDBY","pushButton_XFZTH","pushButton_HYMNDXJ",
-                                "pushButton_XHG","pushButton_XFG","pushButton_HYG",
+                                "pushButton_XFZTH","pushButton_HYMNDXJ",
+                                "pushButton_XFG","pushButton_HYG",
                                 "pushButton_SGS","pushButton_QYZXW","pushButton_TZZSP"
-
-    };
+                                };
 
     int id[40];
     QString name[40];
     QString Ename[40];
     double price[40];
+
 
 //    query.exec("DROP TABLE materials");
 
@@ -107,7 +110,7 @@ PriceList::PriceList(QWidget *parent) :
         query.prepare("insert into materials values(?,?, ?,?)");
         query.bindValue(0, i);
         query.bindValue(1, nameInit[i]);
-        query.bindValue(2, 0);
+        query.bindValue(2, i);
         query.bindValue(3, EnameInit[i]);
         success=query.exec();
         if(!success)

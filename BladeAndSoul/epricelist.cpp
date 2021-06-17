@@ -3,23 +3,6 @@
 
 #define isDROP 0
 
-
-
-#define ZB_DSB_0 ui->doubleSpinBox_FYF
-#define ZB_DSB_1 ui->doubleSpinBox_KTNTH
-#define ZB_DSB_2 ui->doubleSpinBox_HMNTH
-#define ZB_DSB_3 ui->doubleSpinBox_JGYD
-#define ZB_DSB_4 ui->doubleSpinBox_PTJZ
-#define ZB_DSB_5 ui->doubleSpinBox_MSJZ
-#define ZB_DSB_6 ui->doubleSpinBox_SJSZ
-#define ZB_DSB_7 ui->doubleSpinBox_QTST
-#define ZB_DSB_8 ui->doubleSpinBox_DSST
-#define ZB_DSB_9 ui->doubleSpinBox_JLX
-
-
-
-
-
 Epricelist::Epricelist(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Epricelist)
@@ -31,19 +14,24 @@ Epricelist::Epricelist(QWidget *parent) :
 
     setWindowFlags(Qt::FramelessWindowHint|windowFlags()|Qt::WindowStaysOnTopHint);
 
-    m_DoubleSpinBoxArray[0] = ZB_DSB_0;
-    m_DoubleSpinBoxArray[1] = ZB_DSB_1;
-    m_DoubleSpinBoxArray[2] = ZB_DSB_2;
-    m_DoubleSpinBoxArray[3] = ZB_DSB_3;
-    m_DoubleSpinBoxArray[4] = ZB_DSB_4;
-    m_DoubleSpinBoxArray[5] = ZB_DSB_5;
-    m_DoubleSpinBoxArray[6] = ZB_DSB_6;
-    m_DoubleSpinBoxArray[7] = ZB_DSB_7;
-    m_DoubleSpinBoxArray[8] = ZB_DSB_8;
-    m_DoubleSpinBoxArray[9] = ZB_DSB_9;
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_FYF);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_KTMHH);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_HMMHH);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_HMNTH);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_JGYD);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_MSJZ);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_SYSZ);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_DSST);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_YGX);
+    m_DoubleSpinBoxArray.append(ui->doubleSpinBox_JLX);
+
+
+
+
+
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("./qtdb");
+    db.setDatabaseName("./qtdb1.54");
     db.setHostName("admin");
     db.setUserName("admin");
     db.setPassword("12345");
@@ -61,20 +49,20 @@ Epricelist::Epricelist(QWidget *parent) :
         cout << "创建失败";
 
     QString nameInit[ECOUNT] = {"封印符",
-                                "苦痛南天魂","毁灭南天魂",
+                                "苦痛冥幻魂","毁灭冥幻魂","毁灭南天魂",
                                 "金刚腰带",
-                                "蟠桃戒指","明神戒指",
-                                "三极手镯",
-                                "齐天手套","斗神手套",
-                                "金雷星"
+                                "冥神戒指",
+                                "三炎手镯",
+                                "斗神手套",
+                                "月光星","金雷星"
                                 };
     int characternumInit[ECOUNT] = {0,
-                                    12,12,
+                                    12,12,12,
+                                    12,
+                                    12,
                                     12,
                                     12,12,
-                                    12,
-                                    12,12,
-                                    12};
+                                    };
 
     if(isDROP)
         query.exec("DROP TABLE equipment");
@@ -84,7 +72,7 @@ Epricelist::Epricelist(QWidget *parent) :
         query.prepare("insert into equipment values(?,?,?,?)");
         query.bindValue(0, i);
         query.bindValue(1, nameInit[i]);
-        query.bindValue(2, 1000);
+        query.bindValue(2, 1000+i);
         query.bindValue(3, characternumInit[i]);
         success=query.exec();
         if(!success)

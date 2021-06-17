@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>359</width>
-    <height>307</height>
+    <height>381</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
     <width>359</width>
-    <height>307</height>
+    <height>381</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
    <property name="geometry">
     <rect>
      <x>261</x>
-     <y>270</y>
+     <y>330</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>270</y>
+     <y>330</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -50,8 +50,8 @@
     <rect>
      <x>0</x>
      <y>10</y>
-     <width>334</width>
-     <height>221</height>
+     <width>342</width>
+     <height>281</height>
     </rect>
    </property>
    <property name="title">
@@ -59,126 +59,126 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="label_PTJZ">
-      <property name="text">
-       <string>蟠桃戒指：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_PTJZ">
-      <property name="maximum">
-       <double>10000.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="3">
-     <widget class="QLabel" name="label_QTST">
-      <property name="text">
-       <string>齐天手套：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="4">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_QTST">
-      <property name="maximum">
-       <double>10000.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
      <widget class="QLabel" name="label_JLX">
       <property name="text">
        <string>金雷星：</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_KTNTH">
-      <property name="text">
-       <string>苦痛南天魂：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_KTNTH">
+    <item row="0" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_JLX">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
      </widget>
     </item>
-    <item row="2" column="2" colspan="2">
+    <item row="1" column="0">
      <widget class="QLabel" name="label_HMNTH">
       <property name="text">
        <string>毁灭南天魂：</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="4">
+    <item row="1" column="1">
      <widget class="QDoubleSpinBox" name="doubleSpinBox_HMNTH">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_SJSZ">
-      <property name="text">
-       <string>三极手镯：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_SJSZ">
-      <property name="maximum">
-       <double>10000.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_JGYD">
       <property name="text">
-       <string>金刚腰带</string>
+       <string>金刚腰带：</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
+    <item row="2" column="1">
      <widget class="QDoubleSpinBox" name="doubleSpinBox_JGYD">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
      </widget>
     </item>
-    <item row="5" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="label_MSJZ">
       <property name="text">
-       <string>明神戒指</string>
+       <string>冥神戒指：</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="1">
+    <item row="3" column="1">
      <widget class="QDoubleSpinBox" name="doubleSpinBox_MSJZ">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
      </widget>
     </item>
-    <item row="5" column="3">
+    <item row="3" column="2">
      <widget class="QLabel" name="label_DSST">
       <property name="text">
-       <string>斗神手套</string>
+       <string>斗神手套：</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="4">
+    <item row="3" column="3">
      <widget class="QDoubleSpinBox" name="doubleSpinBox_DSST">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_JLX">
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_SYSZ">
+      <property name="text">
+       <string>三炎手镯：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_SYSZ">
+      <property name="maximum">
+       <double>10000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_KTMHH">
+      <property name="text">
+       <string>苦痛冥幻魂：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_KTMHH">
+      <property name="maximum">
+       <double>10000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label_HMMHH">
+      <property name="text">
+       <string>毁灭冥幻魂：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_HMMHH">
+      <property name="maximum">
+       <double>10000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_YGX">
+      <property name="text">
+       <string>月光星：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_YGX">
       <property name="maximum">
        <double>10000.000000000000000</double>
       </property>
@@ -190,7 +190,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>240</y>
+     <y>300</y>
      <width>78</width>
      <height>20</height>
     </rect>
@@ -203,7 +203,7 @@
    <property name="geometry">
     <rect>
      <x>12</x>
-     <y>240</y>
+     <y>300</y>
      <width>72</width>
      <height>20</height>
     </rect>
@@ -216,7 +216,7 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>270</y>
+     <y>330</y>
      <width>75</width>
      <height>23</height>
     </rect>

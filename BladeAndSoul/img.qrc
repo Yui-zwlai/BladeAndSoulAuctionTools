@@ -1,25 +1,24 @@
 <RCC>
     <qresource prefix="/img">
         <file>darkness.ico</file>
-        <file>jpg/晨晖星石.jpg</file>
-        <file>jpg/烦惑结晶.jpg</file>
-        <file>jpg/黑月钢.jpg</file>
-        <file>jpg/黑月魔女的刑具.jpg</file>
-        <file>jpg/金雷星石.jpg</file>
-        <file>jpg/金牙镜.jpg</file>
-        <file>jpg/雷神星石.jpg</file>
-        <file>jpg/雷云结晶.jpg</file>
-        <file>jpg/梦幻魂石.jpg</file>
-        <file>jpg/南天魂石.jpg</file>
-        <file>jpg/神功石.jpg</file>
-        <file>jpg/天命镜.jpg</file>
-        <file>jpg/天乾灵结晶.jpg</file>
-        <file>jpg/挑战珠碎片.jpg</file>
-        <file>jpg/邪花钢.jpg</file>
-        <file>jpg/邪花魔女的苞叶.jpg</file>
-        <file>jpg/雪峰钢.jpg</file>
-        <file>jpg/雪峰之铁华.jpg</file>
-        <file>jpg/雪影镜.jpg</file>
-        <file>jpg/雪影矿.jpg</file>
+        <file>jpg/CHXS.jpg</file>
+        <file>jpg/FHJJ.jpg</file>
+        <file>jpg/HYG.jpg</file>
+        <file>jpg/HYMNDXJ.jpg</file>
+        <file>jpg/JLXS.jpg</file>
+        <file>jpg/JYJ.jpg</file>
+        <file>jpg/LYJJ.jpg</file>
+        <file>jpg/MHHS.jpg</file>
+        <file>jpg/SGS.jpg</file>
+        <file>jpg/TQLJJ.jpg</file>
+        <file>jpg/TSJJ.jpg</file>
+        <file>jpg/TZZSP.jpg</file>
+        <file>jpg/XFG.jpg</file>
+        <file>jpg/XFZTH.jpg</file>
+        <file>jpg/XYJ.jpg</file>
+        <file>jpg/XYK.jpg</file>
+        <file>jpg/NTHS.jpg</file>
+        <file>jpg/YGXS.jpg</file>
+        <file>jpg/YHJ.jpg</file>
     </qresource>
 </RCC>

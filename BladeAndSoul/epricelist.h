@@ -11,6 +11,7 @@
 
 #include <QDoubleSpinBox>
 #include <QMessageBox>
+#include <QVector>
 
 #define ECOUNT 10
 namespace Ui {
@@ -41,7 +42,9 @@ private:
 
     QSqlDatabase db;
 
-    QDoubleSpinBox *m_DoubleSpinBoxArray[ECOUNT];
+    //QDoubleSpinBox *m_DoubleSpinBoxArray[ECOUNT];
+    QVector<QDoubleSpinBox *> m_DoubleSpinBoxArray;
+
 
     QPoint m_pt;
 };

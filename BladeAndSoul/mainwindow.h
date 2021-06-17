@@ -5,6 +5,7 @@
 #include "pricelist.h"
 #include "epricelist.h"
 #include "takecolor.h"
+#include "materialcalculation.h"
 
 #include <QSqlDatabase>
 #include <QSqlDriver>
@@ -13,7 +14,7 @@
 
 #include <QDebug>
 
-#define COUNT 20
+#define COUNT 19
 #define cout qDebug() << "[" <<__FILE__ <<":"<<__LINE__ <<"]"
 
 namespace Ui {
@@ -46,11 +47,14 @@ private slots:
 
     void on_action_about_triggered();
 
+    void on_action33or24_triggered();
+
 private:
     Ui::MainWindow *ui;
     PriceList * w;
     Epricelist * Ew;
     TakeColor * Tw;
+    MaterialCalculation * MCw;
 
     QSqlDatabase db;
 
@@ -63,12 +67,11 @@ private:
         int price;
     }Gang;
 
-    const Gang XHG = {"邪花钢",4,25};
     const Gang XFG = {"雪峰钢",4,25};
     const Gang HYG = {"黑月钢",4,25};
     const Gang SGS = {"神功石",1,10};
 
-    Gang m_gang[4]={XHG,XFG,HYG,SGS};
+    Gang m_gang[3]={XFG,HYG,SGS};
 };
 
 #endif // MAINWINDOW_H
